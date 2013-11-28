@@ -1,0 +1,21 @@
+{
+  "name": "brewery",
+  "version": "0.0.0",
+  "description": "",
+  "main": "brewery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "underscore": "~1.5.2",
+    "logginator": "~1.1.5",
+    "tagged-logger": "~1.0.3",
+    "winston": "~0.7.2",
+    "winston-tagged-http-logger": "~1.1.1",
+    "request": "~2.27.0",
+    "express": "~3.4.4",
+    "general-hammond": "~2.0.0"
+  }
+}
