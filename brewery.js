@@ -15,5 +15,5 @@ readConfig(function(config) {
   proxy('/upload', 'http://localhost:' + config.lambic.port);
   proxy('', 'http://localhost:' + config.saison.port);
 
-  server.listen(5000);
+  server.listen(process.env.PORT || 80);
 });
