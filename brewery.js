@@ -9,6 +9,7 @@ readConfig(function(config) {
   var log = app.log = require('logginator')(config.log);
   require("winston-tagged-http-logger")(server, log.createSublogger('http'));
 
+  proxy('/integration', 'http://localhost:' + config.chhaang.port);
   proxy('/manage', 'http://localhost:' + config.sahti.port);
   proxy('/auth', 'http://localhost:' + config.stout.port);
   proxy('/api', 'http://localhost:' + config.kvass.port);
