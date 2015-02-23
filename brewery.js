@@ -6,8 +6,10 @@ var readConfig = require('general-hammond')();
 var proxy = require('./proxy').bind(null, app);
 
 readConfig(function(config) {
-  var log = app.log = require('logginator')(config.log);
-  require("winston-tagged-http-logger")(server, log.createSublogger('http'));
+  app.log = require('logginator')('brewery', config.log);
+  if (!config.quiet) {
+    require("winston-tagged-http-logger")(server, app.log.createSublogger('http'));
+  }
 
   proxy('/manage', 'http://localhost:' + config.sahti.port);
   proxy('/auth', 'http://localhost:' + config.stout.port);
