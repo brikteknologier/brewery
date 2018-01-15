@@ -2,7 +2,7 @@ var http = require('http');
 var express = require('express');
 var app = express();
 var server = http.createServer(app);
-var readConfig = require('general-hammond')();
+var readConfig = require('general-hammond')('brewery');
 var proxy = require('./proxy').bind(null, app);
 
 readConfig(function(config) {
