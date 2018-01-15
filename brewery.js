@@ -10,13 +10,18 @@ readConfig(function(config) {
   if (!config.quiet) {
     require("winston-tagged-http-logger")(server, app.log.createSublogger('http'));
   }
+  
+  // General hammond will automatically read the base config if the "brewery"
+  // config wasn't found. Unfortunately some older configs don't specify it,
+  // so we have to detect which format we have and go off that.
+  const serviceAddress = (service) => config[service].port != null ? `http://localhost:${config[service].port}` : config[service];
 
-  proxy('/integration', 'http://localhost:' + config.chhaang.port);
-  proxy('/manage', 'http://localhost:' + config.sahti.port);
-  proxy('/auth', 'http://localhost:' + config.stout.port);
-  proxy('/api', 'http://localhost:' + config.kvass.port);
-  proxy('/upload', 'http://localhost:' + config.lambic.port);
-  proxy('', 'http://localhost:' + config.saison.port);
+  proxy('/integration', serviceAddress('chhaang'));
+  proxy('/manage', serviceAddress('sahti'));
+  proxy('/auth', serviceAddress('stout'));
+  proxy('/api', serviceAddress('kvass'));
+  proxy('/upload', serviceAddress('lambic'));
+  proxy('', serviceAddress('saison'));
 
   server.listen(process.env.PORT || 80);
 });
