@@ -9,7 +9,7 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "express": "~3.4.4",
+    "express": "^4.16.2",
     "general-hammond": "~2.0.0",
     "logginator": "^1.3.4",
     "request": "~2.27.0",
