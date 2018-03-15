@@ -1,6 +1,6 @@
 {
   "name": "brewery",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "brewery.js",
   "scripts": {
@@ -12,10 +12,10 @@
     "express": "^4.16.2",
     "general-hammond": "^2.1.1",
     "logginator": "^1.5.0",
-    "request": "^2.83.0",
+    "request": "^2.85.0",
     "tagged-logger": "^1.1.0",
     "underscore": "^1.8.3",
-    "winston": "^2.4.0",
+    "winston": "^2.4.1",
     "winston-tagged-http-logger": "^1.2.1"
   }
 }
