@@ -1,5 +1,5 @@
 {
-  "name": "brewery",
+  "name": "@brik/brewery",
   "version": "1.1.1",
   "description": "",
   "main": "brewery.js",
