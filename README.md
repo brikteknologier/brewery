@@ -1,7 +1,7 @@
 brewery
 =======
 
-proxy service for combining our soa into one server
+proxy service for combining all our servers into one server and routing requests.
 
 
 ## usage
