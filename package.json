@@ -1,6 +1,6 @@
 {
   "name": "@brik/brewery",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "",
   "main": "brewery.js",
   "scripts": {
